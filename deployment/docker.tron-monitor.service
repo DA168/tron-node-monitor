@@ -1,12 +1,12 @@
 [Unit]
-Description=Vechain Monitor
+Description=Tron Monitor
 After=docker.service
 Requires=docker.service
 
 [Service]
 TimeoutStartSec=30
-ExecStartPre=-/usr/bin/docker pull fundrequestio/vechain-node-monitor:master
-ExecStart=/bin/bash /opt/docker/vechain-monitor/run.sh
-ExecStop=-/usr/bin/docker stop vechain-monitor
+ExecStartPre=-/usr/bin/docker pull fundrequestio/tron-node-monitor:master
+ExecStart=/bin/bash /opt/docker/tron-monitor/run.sh
+ExecStop=-/usr/bin/docker stop tron-monitor
 [Install]
 WantedBy=multi-user.target

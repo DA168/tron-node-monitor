@@ -13,7 +13,7 @@ import java.time.temporal.ChronoUnit
 import java.util.*
 
 @Component
-class LatestBlockHealthIndicator(val grpcClient: GrpcClient) : AbstractReactiveHealthIndicator() {
+class LatestBlockFullnodeHealthIndicator(val grpcClient: GrpcClient) : AbstractReactiveHealthIndicator() {
 
     private val latestBlock: Optional<GrpcAPI.BlockExtention>
         get() = try {
